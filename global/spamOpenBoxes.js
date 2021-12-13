@@ -128,13 +128,6 @@ const capitalize = (text) => text.charAt(0).toUpperCase() + text.slice(1);
                 Werewolf: 75,
                 Ghost: 200,
                 "Haunted Pumpkin": 300,
-                "Snow Globe": 5,
-                "Holiday Gift": 5,
-                "Hot Chocolate": 5,
-                "Holiday Wreath": 5,
-                "Gingerbread Man": 20,
-                "Gingerbread House": 20,
-                Snowman: 75,
                 "Santa Claus": 200,
                 "Frost Wreath": 300,
                 "Tropical Globe": 300
@@ -150,5 +143,21 @@ const capitalize = (text) => text.charAt(0).toUpperCase() + text.slice(1);
             alert('Value of Blooks Unlocked: ' + totalValue);
         });
     });
+                "Frost Wreath": 300,
+                "Tropical Globe": 300
+
+            });
+
+            var totalValue = Number("0");
+
+            for (const [blook, quant] of Object.entries(count)) {
+                totalValue += (blookValues[blook]) * quant;
+            };
+            
+            alert('Value of Blooks Unlocked: ' + totalValue);
+        });
+    });
+
+})([((text) => text.charAt(0).toUpperCase() + text.slice(1))(prompt('What box do you want to open? (e.g. "Space") The limited boxes will not open if they are not available')), Number(prompt('How many boxes do you want to open?'))])
 
 })([((text) => text.charAt(0).toUpperCase() + text.slice(1))(prompt('What box do you want to open? (e.g. "Space") The limited boxes will not open if they are not available')), Number(prompt('How many boxes do you want to open?'))])
